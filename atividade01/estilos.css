@@ -1,0 +1,162 @@
+:root {
+    --cor-primaria: #2563eb;    /* Azul vibrante */
+    --cor-secundaria: #7c3aed;  /* Roxo gradiente */
+    --cor-fundo: #f8fafc;       /* Branco suave */
+    --cor-texto: #1e293b;       /* Cinza escuro */
+    --cor-destaque: #dc2626;    /* Vermelho */
+    --cor-borda: #e2e8f0;       /* Cinza claro */
+    --sombra: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Reset Moderno */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+  }
+  
+  /* Header Destaque */
+  header {
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    margin-bottom: 3rem;
+  }
+  
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Grid Layout Revolucionário */
+  #leiaute-flex {
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  /* Sidebars Estilizadas */
+  nav, aside {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--sombra);
+  }
+  
+  /* Conteúdo Principal Dinâmico */
+  main {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  /* Cards de Artigos Modernos */
+  article {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsividade Avançada */
+  @media (max-width: 1024px) {
+    #leiaute-flex {
+      grid-template-columns: 200px 1fr;
+    }
+    
+    aside {
+      display: none; /* Opcional: esconde a sidebar em tablets */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #leiaute-flex {
+      grid-template-columns: 1fr;
+      padding: 0 1rem;
+    }
+    
+    nav {
+      position: static;
+      margin-bottom: 2rem;
+    }
+    
+    header {
+      clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+      padding: 3rem 1rem;
+    }
+  }
+  
+  /* Componentes Modernos */
+  .tabela1 {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+  }
+  
+  .tabela1 th {
+    background: linear-gradient(to right, var(--cor-primaria), var(--cor-secundaria));
+    color: white;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  /* Botões Interativos */
+  input[type="submit"], button {
+    background: linear-gradient(to right, var(--cor-primaria), var(--cor-secundaria));
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Efeitos Visuais */
+  .dancing {
+    font-size: 1.5rem;
+    background: linear-gradient(to right, #f59e0b, #ef4444);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Footer Estilizado */
+  footer {
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 4rem;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  }
