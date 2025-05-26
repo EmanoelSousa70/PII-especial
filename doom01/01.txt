@@ -1,0 +1,7 @@
+O Document Object Model (DOM) é uma interface de programação para documentos web. 
+Ele representa a página de forma que os programas possam alterar a estrutura, o estilo e o conteúdo do documento. 
+O DOM representa o documento como nós e objetos. Isso significa que, com o DOM, o JavaScript pode:
+
+Alterar todos os elementos HTML na página.-Alterar todos os atributos HTML na página.
+Alterar todos os estilos CSS na página.-Remover elementos e atributos HTML existentes.
+-Adicionar novos elementos e atributos HTML.-Reagir a todos os eventos HTML existentes na página.-Criar novos eventos HTML na página.
