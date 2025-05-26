@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 6 - Alterar CSS via DOM</title>
+    <style>
+        #myElement {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            border: 1px solid blue;
+            text-align: center;
+            line-height: 100px;
+            font-size: 18px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myElement">
+        Texto de Exemplo
+    </div>
+    <button onclick="changeStyle()">Alterar Estilo</button>
+
+    <script>
+        function changeStyle() {
+            var element = document.getElementById("myElement");
+            element.style.backgroundColor = "lightgreen"; // Altera a cor de fundo
+            element.style.color = "darkred";              // Altera a cor do texto
+            element.style.fontSize = "24px";              // Altera o tamanho da fonte
+            element.style.border = "2px dashed orange";   // Altera a borda
+        }
+    </script>
+</body>
+</html> //teste ok

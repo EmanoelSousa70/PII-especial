@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 3 - Contar Parágrafos</title>
+</head>
+<body>
+    <div id="containerDiv">
+        <p>Parágrafo 1 dentro da div.</p>
+        <p>Parágrafo 2 dentro da div.</p>
+        <span>Não sou um parágrafo.</span>
+        <p>Parágrafo 3 dentro da div.</p>
+    </div>
+
+    <div id="resultDiv">
+        </div>
+
+    <script>
+        // Seleciona a div que contém os parágrafos
+        var container = document.getElementById("containerDiv");
+
+        // Seleciona todos os parágrafos dentro da div container
+        var paragraphsInContainer = container.getElementsByTagName("p");
+
+        // Conta o número de parágrafos
+        var numberOfParagraphs = paragraphsInContainer.length;
+
+        // Seleciona a div onde o resultado será exibido
+        var resultDisplayDiv = document.getElementById("resultDiv");
+
+        // Exibe o resultado
+        resultDisplayDiv.textContent = "Número de parágrafos dentro da 'containerDiv': " + numberOfParagraphs;
+    </script>
+</body>
+</html>
+
+teste ok

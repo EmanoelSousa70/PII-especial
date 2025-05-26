@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 9 - Tamanho do Texto</title>
+    <style>
+        body {
+            font-size: 16px; /* Tamanho da fonte base */
+        }
+    </style>
+</head>
+<body>
+    <h1>Ajuste de Tamanho de Texto</h1>
+    <p>Este é um parágrafo de exemplo para testar o aumento e a diminuição do tamanho do texto.</p>
+    <p>Outro parágrafo para demonstração.</p>
+
+    <button onclick="increaseFontSize()">Aumentar Texto</button>
+    <button onclick="decreaseFontSize()">Diminuir Texto</button>
+
+    <script>
+        function increaseFontSize() {
+            var body = document.body;
+            var currentFontSize = parseFloat(getComputedStyle(body).fontSize);
+            body.style.fontSize = (currentFontSize + 2) + "px"; // Aumenta em 2px
+        }
+
+        function decreaseFontSize() {
+            var body = document.body;
+            var currentFontSize = parseFloat(getComputedStyle(body).fontSize);
+            // Garante que o tamanho da fonte não fique muito pequeno
+            if (currentFontSize > 8) {
+                body.style.fontSize = (currentFontSize - 2) + "px"; // Diminui em 2px
+            }
+        }
+    </script>
+</body>
+</html>

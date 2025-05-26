@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 11 - Adicionar à Lista</title>
+</head>
+<body>
+    <h1>Adicionar Item à Lista</h1>
+
+    <label for="newItem">Novo Item:</label>
+    <input type="text" id="newItem">
+    <button onclick="addItemToList()">Adicionar</button>
+
+    <ul id="myList">
+        </ul>
+
+    <script>
+        function addItemToList() {
+            var newItemInput = document.getElementById("newItem");
+            var list = document.getElementById("myList");
+
+            var itemText = newItemInput.value.trim(); // Pega o texto e remove espaços em branco
+
+            if (itemText !== "") {
+                // Cria um novo elemento <li>
+                var listItem = document.createElement("li");
+                // Cria um nó de texto com o conteúdo da caixa de texto
+                var textNode = document.createTextNode(itemText);
+                // Adiciona o nó de texto ao <li>
+                listItem.appendChild(textNode);
+                // Adiciona o <li> à lista <ul>
+                list.appendChild(listItem);
+
+                newItemInput.value = ""; // Limpa a caixa de texto
+            } else {
+                alert("Por favor, digite um item para adicionar.");
+            }
+        }
+    </script>
+</body>
+</html>

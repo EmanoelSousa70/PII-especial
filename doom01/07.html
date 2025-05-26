@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 7 - Copiar e Converter</title>
+</head>
+<body>
+    <label for="inputText">Texto Original:</label><br>
+    <input type="text" id="inputText"><br><br>
+
+    <button onclick="copyAndConvert()">Copiar e Converter</button><br><br>
+
+    <label for="outputText">Texto em Caixa Alta:</label><br>
+    <input type="text" id="outputText" readonly>
+
+    <script>
+        function copyAndConvert() {
+            var inputTextElement = document.getElementById("inputText");
+            var outputTextElement = document.getElementById("outputText");
+
+            // Obtém o valor da caixa de texto original
+            var originalText = inputTextElement.value;
+
+            // Converte para caixa alta
+            var upperCaseText = originalText.toUpperCase();
+
+            // Atribui o texto convertido à segunda caixa de texto
+            outputTextElement.value = upperCaseText;
+        }
+    </script>
+</body>
+</html>
+
+//teste ok

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 8 - Alto Contraste</title>
+    <style>
+        body {
+            background-color: white; /* Cor de fundo original */
+            color: black;            /* Cor do texto original */
+        }
+        .high-contrast {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Alto Contraste</h1>
+    <p>Este é um parágrafo de texto para testar o alto contraste.</p>
+    <button onclick="toggleContrast()">Alto Contraste</button>
+    <button onclick="resetColors()">Resetar Cores</button>
+
+    <script>
+        function toggleContrast() {
+            document.body.classList.toggle("high-contrast");
+        }
+
+        function resetColors() {
+            document.body.classList.remove("high-contrast");
+        }
+    </script>
+</body>
+</html>

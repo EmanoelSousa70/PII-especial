@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 2 - Métodos DOM</title>
+</head>
+<body>
+    <h1 id="mainTitle">Bem-vindo ao DOM</h1>
+    <p>Este é o primeiro parágrafo.</p>
+    <p class="intro">Este é o segundo parágrafo.</p>
+    <p>Este é o terceiro parágrafo.</p>
+
+    <script>
+        // a. getElementById()
+        var titleElement = document.getElementById("mainTitle");
+        console.log("Conteúdo do elemento com ID 'mainTitle':", titleElement.textContent);
+        titleElement.textContent = "Título Alterado pelo DOM!";
+
+        // b. getElementsByTagName()
+        var paragraphs = document.getElementsByTagName("p");
+        console.log("Número de parágrafos na página:", paragraphs.length);
+        // Altera o texto do segundo parágrafo 
+        if (paragraphs.length > 1) {
+            paragraphs[1].textContent = "Este parágrafo foi alterado por getElementsByTagName.";
+        }
+    </script>
+</body>
+</html>
+
+teste ok

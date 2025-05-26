@@ -1,0 +1,6 @@
+//Qual a diferença entre as propriedades textContent, innerText e innerHTML dos elementos HTML? Cite exemplos.
+
+Explicação:
+textContent: Retorna ou define o conteúdo textual de um nó e seus descendentes. Ele obtém o conteúdo de todos os elementos, incluindo tags <script> e 
+<style>, mas sem formatação visível (CSS). É eficiente, pois não leva em consideração a renderização visual.//
+    
